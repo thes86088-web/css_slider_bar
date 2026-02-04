@@ -27,6 +27,13 @@
 
 }
 
+.cell{
+    width: 100%;
+    position: relative;
+    top: 40%; left : 35%;
+    
+}
+
   </style>
 <body>
 <div id = "canvas" > 
@@ -42,9 +49,9 @@
 </div>
 
 <div id="breakdown">
-    <div id="red_" ></div>
-    <div id="blue_" ></div>
-    <div id="green_" ></div>
+    <div class="cell" id="red_" ></div>
+    <div class="cell" id="blue_" ></div>
+    <div class="cell" id="green_" ></div>
 </div>
 
 <script>
@@ -55,9 +62,9 @@ function changeCanvasColor()
     var green_ = Math.floor(Math.random()*256);
     var blue_ = Math.floor(Math.random()*256);
 
-    document.getElementById("red_").innerText = "red :" + `${red_}` ;
-    document.getElementById("blue").innerText = "blue :" + `${blue_}` ;
-    document.getElementById("green").innerText = "green :" + `${green_}` ;
+    document.getElementById("red_").innerText = "RED :" + " " + `${red_}` ;
+    document.getElementById("green_").innerText = "GREEN :"  +`${green_}` ;
+    document.getElementById("blue_").innerText = "BLUE :"+ "  " + `${blue_}` ;
 
     document.getElementById("canvas").style.backgroundColor = `rgb(${red_}, ${green_}, ${blue_})` ;
 }
