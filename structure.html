@@ -1,7 +1,7 @@
 <html>
 
 <style>
-.canvas {
+#canvas {
     position: relative;
     top : 0%;
     height : 200px ; width : 50% ;
@@ -19,7 +19,7 @@
     background-color : red;
 }
 
-.random{
+#random{
     position: relative; top : 10%; left : 20%;
     height: 80% ; width : 60%;
 }
@@ -35,22 +35,38 @@
     position: relative;
     top : 30%; left : 10%;
 }
-
-
   </style>
 <body>
-<div class = "canvas" > </div> 
+<div id = "canvas" > </div> 
   <div class="components" >
         <div class = "red" > <p> red :  </p> </div>
         <div class = "green" > <p> green : </p> </div>
         <div class ="blue" > <p> blue : </p> </div>
   </div>
   <div class="press">
-<button class="random"  > 
+<button id="random"  > 
     <div>
         <p> get random color </p>
     </div> 
 </button>
   </div>
+
+<script>
+
+function changeCanvasColor()
+{
+    var red_ = Math.floor(Math.random(256));
+    var green_ = Math.floor(Math.random(256));
+    var blue_ = Math.floor(Math.random(256));
+
+    document.getElementById("canvas").style.backgroundColor = red_, green_, blue_ ;
+}
+    
+
+document.getElementById("random").addEventListener("click",
+ changeCanvasColor ); 
+
+</script>
+
 </body>
 </html>
