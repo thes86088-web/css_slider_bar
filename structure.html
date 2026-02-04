@@ -19,18 +19,31 @@
     height: 80% ; width : 60%;
 }
 
+#breakdown{
+    position: relative; background-color: rgba(88, 192, 215, 0.549);
+    height: 30%; width: 60%; 
+    left : 20% ;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
   </style>
 <body>
 <div id = "canvas" > 
 
 </div> 
-  <div class="press">
-<button id="random"  > 
-    <div>
-        <p> get random color </p>
-    </div> 
-</button>
-  </div>
+
+<div class="press">
+    <button id="random"  > 
+        <div>
+            <p> get random color </p>
+        </div> 
+    </button>
+</div>
+
+<div id="breakdown">
+
+</div>
 
 <script>
 
@@ -39,6 +52,10 @@ function changeCanvasColor()
     var red_ = Math.floor(Math.random()*256);
     var green_ = Math.floor(Math.random()*256);
     var blue_ = Math.floor(Math.random()*256);
+
+    document.getElementById("breakdown").innerText = "red :" + `${red_}` ;
+    document.getElementById("breakdown").innerText = "blue :" + `${blue_}` ;
+    document.getElementById("breakdown").innerText = "green :" + `${green_}` ;
 
     document.getElementById("canvas").style.backgroundColor = `rgb(${red_}, ${green_}, ${blue_})` ;
 }
