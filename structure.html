@@ -2,6 +2,8 @@
 
 <style>
 .canvas {
+    position: relative;
+    top : 0%;
     height : 200px ; width : 50% ;
     background-color : black;
 }
@@ -9,7 +11,7 @@
 .components {
     height : 200px ; width : 50% ;
     background-color : pink; position: relative ;
-    left : 300px; top : -200px
+    left : 50%; top : -215px ;
 }
 .press{
     height: 50px; position: relative;
@@ -18,17 +20,30 @@
 }
 
 .random{
-    position: relative; top : 10%; left : 10%;
-    height: 80% ; width : 80%;
+    position: relative; top : 10%; left : 20%;
+    height: 80% ; width : 60%;
 }
+
+.components > div{
+    height: 20%;  width :70%; position: relative;
+    left: 15%; top :10% ;
+    background-color : chocolate;
+    color : black; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+.components > div > p{
+    position: relative;
+    top : 30%; left : 10%;
+}
+
 
   </style>
 <body>
 <div class = "canvas" > </div> 
   <div class="components" >
-        <div class = "red" placeholder = "red " > </div>
-        <div class = "green" placeholder = "green"> </div>
-        <div class ="blue" placeholder = "blue"> </div>
+        <div class = "red" > <p> red :  </p> </div>
+        <div class = "green" > <p> green : </p> </div>
+        <div class ="blue" > <p> blue : </p> </div>
   </div>
   <div class="press">
 <button class="random"  > 
