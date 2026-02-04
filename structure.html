@@ -39,9 +39,9 @@
 <body>
 <div id = "canvas" > </div> 
   <div class="components" >
-        <div class = "red" > <p> red :  </p> </div>
-        <div class = "green" > <p> green : </p> </div>
-        <div class ="blue" > <p> blue : </p> </div>
+        <div class = "red_" > <p> red :  </p> </div>
+        <div class = "green_" > <p> green : </p> </div>
+        <div class ="blue_" > <p> blue : </p> </div>
   </div>
   <div class="press">
 <button id="random"  > 
@@ -55,9 +55,9 @@
 
 function changeCanvasColor()
 {
-    var red_ = Math.floor(Math.random(256));
-    var green_ = Math.floor(Math.random(256));
-    var blue_ = Math.floor(Math.random(256));
+    var red_ = Math.floor(Math.random()*256);
+    var green_ = Math.floor(Math.random()*256);
+    var blue_ = Math.floor(Math.random()*256);
 
     document.getElementById("canvas").style.backgroundColor = red_, green_, blue_ ;
 }
