@@ -42,7 +42,9 @@
 </div>
 
 <div id="breakdown">
-
+    <div id="red_" ></div>
+    <div id="blue_" ></div>
+    <div id="green_" ></div>
 </div>
 
 <script>
@@ -53,9 +55,9 @@ function changeCanvasColor()
     var green_ = Math.floor(Math.random()*256);
     var blue_ = Math.floor(Math.random()*256);
 
-    document.getElementById("breakdown").innerText = "red :" + `${red_}` ;
-    document.getElementById("breakdown").innerText = "blue :" + `${blue_}` ;
-    document.getElementById("breakdown").innerText = "green :" + `${green_}` ;
+    document.getElementById("red_").innerText = "red :" + `${red_}` ;
+    document.getElementById("blue").innerText = "blue :" + `${blue_}` ;
+    document.getElementById("green").innerText = "green :" + `${green_}` ;
 
     document.getElementById("canvas").style.backgroundColor = `rgb(${red_}, ${green_}, ${blue_})` ;
 }
